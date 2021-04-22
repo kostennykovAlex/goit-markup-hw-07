@@ -12,8 +12,8 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com" />
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 		<!-- <link rel="stylesheet" href="./css/animate.css" /> -->
-		<link rel="stylesheet" href="./css/normalize.css" />
-		<link rel="stylesheet" href="./css/style.css" />
+		<link rel="stylesheet" href="./css/temporary__css/normalize.css" />
+		<link rel="stylesheet" href="./css/temporary__css/style.css" />
 	</head>
 
 	<body>
@@ -40,28 +40,25 @@
 					</ul>
 
 					<!---================== Contact ==================--->
-					<address class="address">
-						<ul class="address list">
-							<li class="address-item">
-								<!-- <img src="./img/nav-adress/envelope-hover.svg" alt="mailto" /> -->
-								<a href="mailto:info@devstudio.com" target="_blank" rel="noopener noreferrer" class="link">
-									<svg class="address-item-icon" width="16" height="12">
-										<use href="./img/iconmoon/sprite.svg#icon-envelope-hover"></use>
-									</svg>
-									info@devstudio.com
-								</a>
-							</li>
-							<li class="address-item">
-								<!-- <img src="./img/nav-adress/smartphone.svg" alt="phone" /> -->
-								<a href="tel:+380961111111" target="_blank" rel="noopener noreferrer" class="link">
-									<svg class="address-item-icon" width="16" height="12">
-										<use href="./img/iconmoon/sprite.svg#icon-smartphone"></use>
-									</svg>
-									+38 096 111 11 11
-								</a>
-							</li>
-						</ul>
-					</address>
+					<ul class="address">
+						<li class="address list">
+							<a href="mailto:info@devstudio.com" target="_blank" rel="noopener noreferrer" class="link">
+								<svg class="address-item-icon" width="16" height="12">
+									<use href="./img/iconmoon/sprite.svg#icon-envelope-hover"></use>
+								</svg>
+								info@devstudio.com
+							</a>
+						</li>
+
+						<li class="address list">
+							<a href="tel:+380961111111" target="_blank" rel="noopener noreferrer" class="link">
+								<svg class="address-item-icon" width="10" height="16">
+									<use href="./img/iconmoon/sprite.svg#icon-smartphone"></use>
+								</svg>
+								+38 096 111 11 11
+							</a>
+						</li>
+					</ul>
 				</nav>
 			</div>
 		</header>
@@ -146,17 +143,23 @@
 					<ul class="duties-work list">
 						<li class="duties-solutions">
 							<img src="./img/What-we-are/desktop.jpg" alt="Десктоп" width="370" height="295" />
-							<h3>Десктопные приложения</h3>
+							<div class="duties-approach">
+								<h3 class="duties-app">Десктопные приложения</h3>
+							</div>
 						</li>
 
 						<li class="duties-solutions">
 							<img src="./img/What-we-are/mobile.jpg" alt="Mобильные приложения" width="370" height="295" />
-							<h3>Мобильные приложения</h3>
+							<div class="duties-approach">
+								<h3 class="duties-app">Мобильные приложения</h3>
+							</div>
 						</li>
 
 						<li class="duties-solutions">
 							<img src="./img/What-we-are/solutions.jpg" alt="Дизайнерские решения" width="370" height="295" />
-							<h3>Дизайнерские решения</h3>
+							<div class="duties-approach">
+								<h3 class="duties-app">Дизайнерские решения</h3>
+							</div>
 						</li>
 					</ul>
 				</div>
@@ -400,77 +403,68 @@
 
 		<!--================== Footer ===================-->
 		<footer class="footer-section">
-			<div class="container footer-flexbox">
-				<div class="footer-information footer-flexbox">
-					<div class="footer-contacts-block">
-						<a href="index.html" class="footer-logo">
-							<span class="footer-logo-accent">Web</span>
-							Studio
-						</a>
+			<div class="container footer-information footer-flexbox">
+				<div class="footer-contacts-block">
+					<a href="index.html" class="footer-logo">
+						<span class="footer-logo-accent">Web</span>
+						Studio
+					</a>
 
-						<!---==================== Footer-Address =====================--->
-						<address class="footer-adress location-adress">
-							<p>г. Киев, пр-т Леси Украинки, 26</p>
-						</address>
+					<!---============ Address =============--->
+					<address class="footer-adress">
+						<p>г. Киев, пр-т Леси Украинки, 26</p>
+					</address>
 
-						<address class="footer-adress">
-							<ul class="footer-contacts list">
-								<li class="footer-contacts adress">
-									<a class="link" href="mailto:info@devstudio.com" target="_blank" rel="noopener noreferrer">
-										info@devstudio.com
-									</a>
-								</li>
+					<ul class="footer-contacts list">
+						<li class="footer-contacts adress">
+							<a href="mailto:info@devstudio.com" target="_blank" rel="noopener noreferrer" class="link">
+								info@devstudio.com
+							</a>
+						</li>
 
-								<li class="footer-contacts adress">
-									<a class="link" href="tel:+380961111111">+38 096 111 11 11</a>
-								</li>
-							</ul>
-						</address>
-					</div>
-					<div class="footer-contacts-block">
-						<p class="call-to-action">
-							<b>присоединяйтесь</b>
-						</p>
-						<ul class="footer-contacts-social-link list">
-							<li class="footer-social-links-item">
-								<a href="" class="link">
-									<svg class="footer-social-links-item-icon" width="20" height="20">
-										<use href="./img/iconmoon/sprite.svg#icon-footer-instagram"></use>
-									</svg>
-									<!-- <img src="./img/footer-social-link/instagram.svg" alt="" /> -->
-								</a>
-							</li>
-							<li class="footer-social-links-item">
-								<a href="" class="link">
-									<svg class="footer-social-links-item-icon" width="20" height="20">
-										<use href="./img/iconmoon/sprite.svg#icon-footer-twitter"></use>
-									</svg>
-									<!-- <img src="./img/footer-social-link/twitter.svg" alt="" /> -->
-								</a>
-							</li>
-							<li class="footer-social-links-item">
-								<a href="" class="link">
-									<svg class="footer-social-links-item-icon" width="20" height="20">
-										<use href="./img/iconmoon/sprite.svg#icon-footer-facebook"></use>
-									</svg>
-									<!-- <img src="./img/footer-social-link/facebook.svg" alt="" /> -->
-								</a>
-							</li>
-							<li class="footer-social-links-item">
-								<a href="" class="link">
-									<svg class="footer-social-links-item-icon" width="20" height="20">
-										<use href="./img/iconmoon/sprite.svg#icon-footer-linkedin"></use>
-									</svg>
-									<!-- <img src="./img/footer-social-link/linkedin.svg" alt="" /> -->
-								</a>
-							</li>
-						</ul>
-					</div>
+						<li class="footer-contacts adress">
+							<a href="tel:+380961111111" class="link">+38 096 111 11 11</a>
+						</li>
+					</ul>
+				</div>
+				<div class="footer-contacts-block join">
+					<p class="call-to-action">
+						<b>присоединяйтесь</b>
+					</p>
+					<ul class="footer-contacts-social-link list">
+						<li class="footer-social-links-item">
+							<a href="" class="link">
+								<svg class="footer-social-links-item-icon" width="20" height="20">
+									<use href="./img/iconmoon/sprite.svg#icon-footer-instagram"></use>
+								</svg>
+							</a>
+						</li>
+						<li class="footer-social-links-item">
+							<a href="" class="link">
+								<svg class="footer-social-links-item-icon" width="20" height="20">
+									<use href="./img/iconmoon/sprite.svg#icon-footer-twitter"></use>
+								</svg>
+							</a>
+						</li>
+						<li class="footer-social-links-item">
+							<a href="" class="link">
+								<svg class="footer-social-links-item-icon" width="20" height="20">
+									<use href="./img/iconmoon/sprite.svg#icon-footer-facebook"></use>
+								</svg>
+							</a>
+						</li>
+						<li class="footer-social-links-item">
+							<a href="" class="link">
+								<svg class="footer-social-links-item-icon" width="20" height="20">
+									<use href="./img/iconmoon/sprite.svg#icon-footer-linkedin"></use>
+								</svg>
+							</a>
+						</li>
+					</ul>
 				</div>
 
 				<!--========================== FORM ==========================-->
 				<!--==========================Footer FORM ==========================-->
-
 				<div class="footer-information form">
 					<label class="call-to-action" for="footer-input-size">
 						<b>подпишитесь на рассылку</b>
@@ -484,8 +478,8 @@
 							id="footer-input-size"
 							placeholder="E-mail"
 							required
-							oninvalid="this.setCustomValidity('You will not pass!!! сначала заполни форму')"
-							oniput="this.setCustomValidity('You will not pass!!! сначала заполни форму')"
+							oninvalid="this.setCustomValidity('You will not pass!!!')"
+							oniput="this.setCustomValidity('You will not pass!!!')"
 						/>
 						<button class="footer-button" type="submit">
 							Подписаться
@@ -521,8 +515,8 @@
 								id="name"
 								autofocus
 								required
-								oninvalid="this.setCustomValidity('You will not pass!!! сначала заполни форму')"
-								oniput="this.setCustomValidity('You will not pass!!! сначала заполни форму')"
+								oninvalid="this.setCustomValidity('You will not pass!!!')"
+								oniput="this.setCustomValidity('You will not pass!!!')"
 							/>
 							<svg class="modal-form-icon">
 								<use href="./img/iconmoon/sprite.svg#icon-person-black"></use>
@@ -539,8 +533,8 @@
 								name="user-tel"
 								id="tel"
 								required
-								oninvalid="this.setCustomValidity('You will not pass!!! сначала заполни форму')"
-								oniput="this.setCustomValidity('You will not pass!!! сначала заполни форму')"
+								oninvalid="this.setCustomValidity('You will not pass!!!')"
+								oniput="this.setCustomValidity('You will not pass!!!')"
 							/>
 							<svg class="modal-form-icon">
 								<use href="./img/iconmoon/sprite.svg#icon-phone-black"></use>
@@ -557,8 +551,8 @@
 								name="user-mail"
 								id="mail"
 								required
-								oninvalid="this.setCustomValidity('You will not pass!!! сначала заполни форму')"
-								oniput="this.setCustomValidity('You will not pass!!! сначала заполни форму')"
+								oninvalid="this.setCustomValidity('You will not pass!!!')"
+								oniput="this.setCustomValidity('You will not pass!!!')"
 							/>
 							<svg class="modal-form-icon">
 								<use href="./img/iconmoon/sprite.svg#icon-email-black"></use>
@@ -579,8 +573,8 @@
 								type="checkbox"
 								name="checkbox"
 								required
-								oninvalid="this.setCustomValidity('You will not pass!!! сначала заполни форму')"
-								oniput="this.setCustomValidity('You will not pass!!! сначала заполни форму')"
+								oninvalid="this.setCustomValidity('You will not pass!!! fa**ing cocoroach')"
+								oniput="this.setCustomValidity('You will not pass!!! fa**ing cocoroach')"
 							/>
 							<span class="icon-checkbox"></span>
 

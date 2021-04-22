@@ -100,6 +100,7 @@ body {
 	/* shadow btn */
 	animation-duration: 1000ms;
 	animation-iteration-count: 1;
+	transition: text-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 
 .logo:hover {
@@ -116,12 +117,6 @@ body {
 	border-bottom: 1px solid #ececec;
 }
 
-.header-section {
-		/* position: fixed;
-		width: 100%;
-		background-color: rgba(226, 226, 226, 0.5);
-		z-index: 1; */
-}
 /* =====================Nav-Header===================== */
 .maine-nav {
 	display: flex;
@@ -183,9 +178,18 @@ body {
 
 
 /* =====================Adress site=====================  */
+.address {
+	display: flex;
+	margin-left: auto;
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-left: 0;
+}
+
 .address a {
-	display: inline-flex;
+	display: flex;
 	align-items: center;
+	justify-content: flex-end;
 	padding-top: 32px;
 	padding-bottom: 32px;
 
@@ -197,29 +201,22 @@ body {
 	letter-spacing: 0.02em;
 	/* outline: 1px solid rgb(74, 165, 0); */
 	
-	transition: var(--transorm-color);
 	color: var(--primary-text-color);
+	transition: var(--transorm-color);
 }
 
 .address-item-icon {
 	fill: currentColor;
 	margin-right: 10px;
-	
 }
 
 
-.address {
-	display: flex;
-	margin-left: auto;
+.address li:not(:last-child) {
+	margin-right: 50px;
 }
 
-
-.address .list li:not(:last-child) {
-	margin-right: 30px;
-}
-
-.address-item .link:hover,
-.address-item .link:focus {
+.address .link:hover,
+.address .link:focus {
 	color: var(--accent-color);
 	cursor: pointer;	
 }
@@ -240,7 +237,7 @@ body {
 	margin-right: auto;
 	background-color: var(--bg-color-overlay);
 	background-image: linear-gradient(
-	to right,
+	to right
 	var(--bg-overlay),
 	var(--bg-overlay)),
 	url("../img/img-overlay/head-img.jpg");
@@ -377,11 +374,13 @@ body {
 	filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.20));
 }
 
-.advantages-info h3 {
-
+.advantages-description {
 	margin-top: 30px;
-	margin-bottom: 10px;
+}
 
+.advantages-info h3 {
+	margin-top: 0;
+	margin-bottom: 10px;
 	font-family: Roboto;
 	font-style: normal;
 	font-weight: 700;
@@ -461,19 +460,18 @@ body {
 	position: relative;
 }
 
-.duties-solutions h3 {
+.duties-app {
+	margin: 0;
 	font-style: normal;
 	font-weight: 700;
 	font-size: 14px;
 	line-height: 1.143;
 	text-align: center;
 	text-transform: uppercase;
-	
 	color: rgb(232, 230, 227);
-	background-color: rgba(40, 43, 44, 0.8);
 }
 
-.duties-solutions h3 {
+.duties-approach {
 	position: absolute;
 	bottom: 0;
 	left: 0;
@@ -483,13 +481,16 @@ body {
 	padding-bottom: 27px;
 	width: 100%;
 	height: 70px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: rgba(40, 43, 44, 0.8);
 }
 
 /* ===================Our team==================== */
 .section-our-team {
 	background: var(--secondary-bg-color);
 }
-
 
 .team-member-information {
 	padding-top: 30px;
@@ -512,7 +513,7 @@ body {
 }
 
 .our-team-card h3 {
-	font-family: Roboto;													
+	font-family: Roboto;
 	font-style: 400;
 	font-weight: 500;
 	font-size: 16px;
@@ -604,7 +605,6 @@ body {
 	width: 44px;
 	height: 44px;
 	border-radius: 50px;
-	transition: 0.2s;
 }
 
 
@@ -634,7 +634,7 @@ body {
 	height: 90px;
 	color: var(--primary-icons-color);
 	
-	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 	border-radius: 4px;
 	border: 1px solid var(--primary-icons-color);
 }
@@ -670,6 +670,7 @@ body {
 
 /* =====================Footer===================== */
 
+/* =====================Footer===================== */
 .footer-section {
 	padding-top: 60px;
 	padding-bottom: 60px;
@@ -678,24 +679,25 @@ body {
 
 .footer-flexbox {
 	display: flex;
-	justify-content: space-between;
 	align-items: baseline
+}
+
+.footer-information:not(:last-child) {
+	margin-right: 93px;
+}
+.footer-contacts-block{
+	margin-right: 70px;
+}
+.footer-contacts-block.join {
+	margin-right: 95px;
 }
 
 /* =====================Footer-contact-block===================== */
 
-.footer-contacts-block {
-	width: calc((100% - 30px) / 2);
-}
+
 
 .footer-information:not(:last-child) {
-	margin-right: 30px;
-}
-.footer-contacts-block:not(:last-child) {
-	margin-right: 30px;
-}
-.footer-information {
-	width: calc((100% - 30px) / 2);
+	margin-right: 93px;
 }
 
 /* ====================Footer-input-size==================== */
@@ -784,20 +786,19 @@ body {
 	font-size: 26px;
 	line-height: 1.192;
 	text-decoration: none;
-	margin-right: 85px;
+	margin-right: 75px;
 	margin-bottom: 20px;
 	/* identical to box height */
-	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	transition: text-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 	color: var(--primary-white-color);
 }
 .footer-logo-accent {
-	
 	color: var(--accent-color);
 }
 
 .footer-logo:hover,
 .footer-logo:focus {
-	text-shadow: 0px 4px 4px var(--accent-color);
+	text-shadow: 0px 4px 4px var(--secondary-bg-color);
 }
 
 
@@ -822,7 +823,7 @@ body {
 	height: 44px;
 	border-radius: 50%;
 
-	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 	background: rgba(255, 255, 255, 0.1);
 	color: var(--primary-white-color);
@@ -966,10 +967,11 @@ body {
 }
 
 .close-button-icon {
-	width: 20px;
-    height: 24px;
-    margin-left: -4px;
+	width: 27px;
+	height: 26px;
+	margin-left: -4px;
 }
+
 .close-button-icon:hover, 
 .close-button-icon:focus {
 	fill: var(--accent-color);
@@ -980,13 +982,11 @@ body {
 	flex-direction: column;
 }
 
-
 .modal-form-input {
 	width: 100%;
 	height: 40px;
 	margin: 0;
 	padding: 11px 11px 11px 40px;
-	
 	font: inherit;
 	box-shadow: none;
 	border: 1px solid rgba(33, 33, 33, 0.2);
