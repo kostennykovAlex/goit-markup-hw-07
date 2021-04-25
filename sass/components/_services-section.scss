@@ -1,0 +1,54 @@
+.duties-work {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+
+.duties-solutions {
+	margin-right: 30px;
+    
+    & img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+    &:nth-child(3n) {
+	margin-right: 0;
+}
+    
+    &:nth-last-child(-n + 3) {
+	margin-bottom: 0;	
+}
+
+    & {
+	position: relative;
+}
+}
+
+.duties-app {
+	margin: 0;
+	font-style: normal;
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 1.143;
+	text-align: center;
+	text-transform: uppercase;
+	color: rgb(232, 230, 227);
+}
+
+.duties-approach {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: 0;
+	padding-top: 27px;
+	padding-bottom: 27px;
+	width: 100%;
+	height: 70px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: rgba(40, 43, 44, 0.8);
+}

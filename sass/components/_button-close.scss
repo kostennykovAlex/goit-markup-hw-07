@@ -1,0 +1,35 @@
+.close-button {
+	position: absolute;
+	top: 8px;
+	right: 8px;
+
+	width: 30px;
+	height: 30px;
+
+	background-color: var(--primary-white-color);
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	border-radius: 50px;
+
+	cursor: pointer;
+
+	outline: 0;
+
+	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus,
+    &:active {
+	background-color: var(--secondary-bg-color);
+}
+
+    &-icon {
+	width: 27px;
+	height: 26px;
+	margin-left: -4px;
+}
+
+    &-icon:hover, 
+    &-icon:focus {
+	fill: var(--accent-color);
+}
+}

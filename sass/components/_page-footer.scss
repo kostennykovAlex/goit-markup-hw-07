@@ -1,0 +1,18 @@
+.footer-section {
+	padding-top: 60px;
+	padding-bottom: 60px;
+	background-color: var(--footer-bg-color);
+}
+
+.footer-flexbox {
+	display: flex;
+	align-items: baseline
+}
+
+
+.footer-contacts-block{
+	margin-right: 70px;
+    &.join {
+	margin-right: 95px;
+}
+}

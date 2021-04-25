@@ -1,0 +1,32 @@
+.modal-form-btn {
+	display: block;
+	margin: 0 auto;
+	padding-top: 10px;
+	padding-right: 32px;
+	padding-bottom: 10px;
+	padding-left: 32px;
+	
+	background: var(--accent-color);
+	transition: var(--transition-button-color);
+	min-width: 200px;
+	min-height: 50px;
+
+
+    &-btn {
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 1.875;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+	border-radius: 4px;
+	text-align: center;
+	letter-spacing: 0.06em;
+	color: var(--primary-white-color);
+}
+
+    &-btn:hover,
+    &-btn:focus {
+	background-color: var(--primary-white-color);
+	color: var(--accent-color);
+	
+}
+}
