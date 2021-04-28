@@ -16,40 +16,40 @@
 	</head>
 	<body>
 		<!---================== Header ==================--->
-		<header class="header-section">
+		<header class="header">
 			<div class="container">
-				<nav class="maine-nav">
-					<a href="index.html" class="logo animate__lightSpeedInRight">
-						<span class="logo-accent">Web</span>
+				<nav class="site-nav">
+					<a href="index.html" class="site-nav__logo animate__lightSpeedInRight">
+						<span class="site-nav__logo--accent">Web</span>
 						Studio
 					</a>
 					<!---==================Info ==================--->
-					<ul class="site-nav list">
-						<li>
-							<a href="index.html" class="animate__lightSpeedInLeft link current">Студия</a>
+					<ul class="site-nav__list list">
+						<li class="site-nav__item">
+							<a href="index.html" class="site-nav__link current link">Студия</a>
 						</li>
-						<li>
-							<a href="portfolio.html" class="animate__lightSpeedInLeft link">Портфолио</a>
+						<li class="site-nav__item">
+							<a href="portfolio.html" class="site-nav__link animate__lightSpeedInLeft link">Портфолио</a>
 						</li>
-						<li>
-							<a href="/" aria-label="Контакты" class="animate__lightSpeedInLeft link">Контакты</a>
+						<li class="site-nav__item">
+							<a href="/" aria-label="Контакты" class="site-nav__link animate__lightSpeedInLeft link">Контакты</a>
 						</li>
 					</ul>
 
 					<!---================== Contact ==================--->
-					<ul class="address">
-						<li class="address list">
-							<a href="mailto:info@devstudio.com" target="_blank" rel="noopener noreferrer" class="link">
-								<svg class="address-item-icon" width="16" height="12">
+					<ul class="address list">
+						<li class="address__item">
+							<a href="mailto:info@devstudio.com" target="_blank" rel="noopener noreferrer" class="address__link">
+								<svg class="address__item--icon" width="16" height="12">
 									<use href="./img/iconmoon/sprite.svg#icon-envelope-hover"></use>
 								</svg>
 								info@devstudio.com
 							</a>
 						</li>
 
-						<li class="address list">
-							<a href="tel:+380961111111" target="_blank" rel="noopener noreferrer" class="link">
-								<svg class="address-item-icon" width="10" height="16">
+						<li class="address__item">
+							<a href="tel:+380961111111" target="_blank" rel="noopener noreferrer" class="address__link">
+								<svg class="address__item--icon" width="10" height="16">
 									<use href="./img/iconmoon/sprite.svg#icon-smartphone"></use>
 								</svg>
 								+38 096 111 11 11
@@ -63,71 +63,75 @@
 		<!---================== Blok Hero ==================--->
 		<!---================== Order service ==================--->
 		<main>
-			<section class="hero-section">
-				<div class="hero-banner hero-flexbox">
-					<div class="container">
-						<h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-						<!----====================BUTTON====================---->
-						<button type="button" class="hero-button" data-modal-open>Заказать услугу</button>
-					</div>
+			<section class="hero">
+				<div class="container">
+					<h1 class="hero__title">Эффективные решения для вашего бизнеса</h1>
+					<!----====================BUTTON====================---->
+					<button type="button" class="hero__button" data-modal-open>Заказать услугу</button>
 				</div>
 			</section>
 
 			<!---================== Features ==================--->
 
-			<section class="section-advantages">
+			<section class="advantages">
 				<div class="container">
 					<h2 class="visually-hidden">Наши преймущества</h2>
-					<ul class="advantages-features list">
-						<li class="advantages-info">
-							<div class="advantages-icon-place">
-								<svg class="advantages-icon">
+					<ul class="advantages__features list">
+						<li class="advantages__item">
+							<div class="advantages__place">
+								<svg class="advantages__icon">
 									<use href="./img/iconmoon/sprite.svg#icon-antenna"></use>
 								</svg>
-								<!-- <img src="./img/features/antenna.svg" alt="satellite" /> -->
 							</div>
-							<div class="advantages-description">
-								<h3>Внимание к деталям</h3>
-								<p>Идейные соображения, а также начало повседневной работы по формированию позиции.</p>
+							<div class="advantages__description">
+								<h3 class="advantages__title">Внимание к деталям</h3>
+								<p class="advantages__info">
+									Идейные соображения, а также начало повседневной работы по формированию позиции.
+								</p>
 							</div>
 						</li>
 
-						<li class="advantages-info">
-							<div class="advantages-icon-place">
-								<!-- <img src="./img/features/clock.svg" alt="clock" /> -->
-								<svg class="advantages-icon">
+						<li class="advantages__item">
+							<div class="advantages__place">
+								<svg class="advantages__icon">
 									<use href="./img/iconmoon/sprite.svg#icon-clock"></use>
 								</svg>
 							</div>
-							<div class="advantages-description">
-								<h3>Пунктуальность</h3>
-								<p>Задача организации, в особенности же рамки и место обучения кадров влечет за собой.</p>
+							<div class="advantages__description">
+								<h3 class="advantages__title">Пунктуальность</h3>
+								<p class="advantages__info">
+									Задача организации, в особенности же рамки и место обучения кадров влечет за собой.
+								</p>
 							</div>
 						</li>
 
-						<li class="advantages-info">
-							<div class="advantages-icon-place">
+						<li class="advantages__item">
+							<div class="advantages__place">
 								<!-- <img src="./img/features/diagram.svg" alt="nootebook" /> -->
-								<svg class="advantages-icon">
+								<svg class="advantages__icon">
 									<use href="./img/iconmoon/sprite.svg#icon-diagram"></use>
 								</svg>
 							</div>
-							<div class="advantages-description">
-								<h3>Планирование</h3>
-								<p>Равным образом консультация с широким активом в значительной степени обуславливает.</p>
+							<div class="advantages__description">
+								<h3 class="advantages__title">Планирование</h3>
+								<p class="advantages__info">
+									Равным образом консультация с широким активом в значительной степени обуславливает.
+								</p>
 							</div>
 						</li>
 
-						<li class="advantages-info">
-							<div class="advantages-icon-place">
+						<li class="advantages__item">
+							<div class="advantages__place">
 								<!-- <img src="./img/features/astronaut.svg" alt="astronavt" /> -->
-								<svg class="advantages-icon">
+								<svg class="advantages__icon">
 									<use href="./img/iconmoon/sprite.svg#icon-astronaut"></use>
 								</svg>
 							</div>
-							<div class="advantages-description">
-								<h3>Современные технологии</h3>
-								<p>Значимость этих проблем настолько очевидна, что реализация плановых заданий.</p>
+							<div class="advantages__description">
+								<h3 class="advantages__title">Современные технологии</h3>
+								<p class="advantages__info">
+									Значимость этих проблем настолько очевидна, что реализация плановых заданий.
+								</p>
 							</div>
 						</li>
 					</ul>
@@ -135,28 +139,28 @@
 			</section>
 
 			<!---================== Duties ==================--->
-			<section class="section-duties section">
+			<section class="duties section">
 				<div class="container">
-					<h2 class="title-attachment">Чем мы занимаемся</h2>
-					<ul class="duties-work list">
-						<li class="duties-solutions">
+					<h2 class="duties__title--attachment">Чем мы занимаемся</h2>
+					<ul class="duties__work list">
+						<li class="duties__item">
 							<img src="./img/What-we-are/desktop.jpg" alt="Десктоп" width="370" height="295" />
-							<div class="duties-approach">
-								<h3 class="duties-app">Десктопные приложения</h3>
+							<div class="duties__approach">
+								<h3 class="duties__app">Десктопные приложения</h3>
 							</div>
 						</li>
 
-						<li class="duties-solutions">
+						<li class="duties__item">
 							<img src="./img/What-we-are/mobile.jpg" alt="Mобильные приложения" width="370" height="295" />
-							<div class="duties-approach">
-								<h3 class="duties-app">Мобильные приложения</h3>
+							<div class="duties__approach">
+								<h3 class="duties__app">Мобильные приложения</h3>
 							</div>
 						</li>
 
-						<li class="duties-solutions">
+						<li class="duties__item">
 							<img src="./img/What-we-are/solutions.jpg" alt="Дизайнерские решения" width="370" height="295" />
-							<div class="duties-approach">
-								<h3 class="duties-app">Дизайнерские решения</h3>
+							<div class="duties__approach">
+								<h3 class="duties__app">Дизайнерские решения</h3>
 							</div>
 						</li>
 					</ul>
@@ -164,21 +168,21 @@
 			</section>
 
 			<!---================== Our team ==================--->
-			<section class="section-our-team section">
+			<section class="our-team section">
 				<div class="container">
-					<h2 class="our-team-title">Наша команда</h2>
-					<ul class="our-team-personal list">
-						<li class="our-team-card">
+					<h2 class="our-team__title">Наша команда</h2>
+					<ul class="our-team__personal list">
+						<li class="our-team__item">
 							<img src="./img/our-team/igor.jpg" alt="Игорь Демьяненко" width="270" height="260" />
-							<div class="team-member-information">
-								<h3>Игорь Демьяненко</h3>
-								<p lang="en">Product Designer</p>
+							<div class="our-team__information">
+								<h3 class="our-team__name">Игорь Демьяненко</h3>
+								<p lang="en" class="our-team__profession">Product Designer</p>
 
-								<ul class="our-team-social-link list">
-									<li class="our-team-social-link-list">
+								<ul class="our-team__social--link list">
+									<li class="our-team__social--link--list">
 										<a class="social-link-list-svg" href="" aria-label="Ссылка на instagram">
 											<!-- <img src="./img/social-link/instagram.svg" alt="Ссылка на instagram" /> -->
-											<svg class="our-team-social-link-icon" width="20px" height="20px">
+											<svg class="our-team__icon" width="20px" height="20px">
 												<use href="./img/iconmoon/sprite.svg#icon-instagram"></use>
 											</svg>
 										</a>
@@ -213,7 +217,7 @@
 
 						<li class="our-team-card">
 							<img src="./img/our-team/olga.jpg" alt="Ольга Репина" width="270" height="260" />
-							<div class="team-member-information">
+							<div class="our-team__information">
 								<h3>Ольга Репина</h3>
 								<p lang="en">Frontend Developer</p>
 								<ul class="our-team-social-link list">

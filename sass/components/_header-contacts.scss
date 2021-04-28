@@ -5,7 +5,8 @@
 	margin-bottom: 0;
 	padding-left: 0;
     
-    & a {
+     
+	&__link {
 	display: flex;
 	align-items: center;
 	justify-content: flex-end;
@@ -19,22 +20,22 @@
 	line-height: 1.142;
 	letter-spacing: 0.02em;
 	/* outline: 1px solid rgb(74, 165, 0); */
-	
+	text-decoration: none;
 	color: var(--primary-text-color);
 	transition: var(--transorm-color);
 }
 
-    &-item-icon {
+    &__item--icon {
 	fill: currentColor;
 	margin-right: 10px;
 }
 
-    & li:not(:last-child) {
+    &__item:not(:last-child) {
 	margin-right: 50px;
 }
 
-    & .link:hover,
-    & .link:focus {
+    &__link:hover,
+    &__link:focus {
 	color: var(--accent-color);
 	cursor: pointer;	
 }

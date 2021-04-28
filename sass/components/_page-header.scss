@@ -1,27 +1,24 @@
-.header-section {
+.header {
 	border-bottom: 1px solid #ececec;
 }
 
 /* =====================Nav-Header===================== */
-.maine-nav {
-	display: flex;
-	align-items: center;
-    
-    & a {
-	margin-bottom: 0;
-}
-}
 
 
 .site-nav {
 	display: flex;
+	align-items: center;
 	
-
-    & .link {
+	&__list {
+	display: flex;
+	}
+	
+ 
+    &__link {
 	display: block;
 	padding-top: 32px;
  	padding-bottom: 32px;
-	
+	margin-bottom: 0;
 	font-weight: 500;
 	font-size: 14px;
 	line-height: 1.142;
@@ -34,30 +31,12 @@
 }
 
 
-    & .current {
-	position: relative;
-	color: var(--accent-color);
-}
-
-    & .current::after {
-	content: " ";
-	position: absolute;
-	bottom: -1px;
-	left: 0;
-	width: 100%;
-	height: 4px;
-	border-radius: 2px;
-
-	background-color: var(--accent-color);
-	
-}
-
-    & li:not(:last-child) {
+    &__item:not(:last-child) {
 	margin-right: 50px;
 }
 
-    & .link:hover,
-    & .link:focus {
+    &__link:hover,
+    &__link:focus {
 	color: var(--accent-color);
 	cursor: pointer;
 }

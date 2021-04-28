@@ -1,9 +1,9 @@
-.site-nav .current {
+.current {
 	position: relative;
 	color: var(--accent-color);
+}
 
-
-    &.current::after {
+.current::after {
 	content: " ";
 	position: absolute;
 	bottom: -1px;
@@ -14,5 +14,4 @@
 
 	background-color: var(--accent-color);
 	
-}
 }
