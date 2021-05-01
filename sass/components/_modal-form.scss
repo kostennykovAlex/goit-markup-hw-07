@@ -1,9 +1,104 @@
-.modal-form {
+
+/* =========================FORM========================= */
+/* =================Form-Title-Info================= */
+.modal__title {
+	text-align: center;
+	margin: 0;
+	margin-bottom: 12px;
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 1.15;
+	letter-spacing: 0.03em;
+}
+
+/* ====================Backdrop==================== */
+.modal__backdrop {
+	position: fixed;
+
+	top: 0;
+	left: 0;
+
+	width: 100%;
+	height: 100%;
+
+	background: rgba(0, 0, 0, 0.2);
+
+	opacity: 1;
+	transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal__backdrop.is-hidden {
+	opacity: 0;
+	pointer-events: none;
+}
+
+.modal__box {
+	position: absolute;
+	width: 528px;
+	height: 581px;	
+	top: 50%;
+	left: 50%;
+
+	width: 528px;
+	height: 581px;
+
+	padding: 40px;
+	background-color: var(--primary-white-color);
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+	border-radius: 4px;
+
+	transform: translate(-50%, -50%) scale(1);
+	transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal__backdrop.is-hidden .modal {
+	transform: translate(-50%, -50%) scale(0.9);
+}
+
+/* =================CLOSE-BTN================= */
+.modal__close--button {
+	position: absolute;
+	top: 8px;
+	right: 8px;
+
+	width: 30px;
+	height: 30px;
+
+	background-color: var(--primary-white-color);
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	border-radius: 50px;
+
+	cursor: pointer;
+
+	outline: 0;
+
+	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+	&:hover,
+	&:focus,
+	&:active {
+	background-color: var(--secondary-bg-color);
+}
+
+	&:hover, 
+	&:focus {
+	fill: var(--accent-color);
+}
+}
+
+.modal__close--icon {
+	width: 20px;
+	height: 28px;
+	margin-left: 0px;
+}
+
+/*========================= Modal-form-input =========================*/
+.modal__form {
 	display: flex;
 	flex-direction: column;
+}
 
-
-	&-input {
+.modal__input {
 	width: 100%;
 	height: 40px;
 	margin: 0;
@@ -15,7 +110,26 @@
 	transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-	&-icon {
+.modal__input:focus-within,
+.comment-field:focus {
+	border-color: var(--accent-color);
+	outline: none;
+}
+
+.modal__input:focus + .modal__icon {
+	fill: var(--accent-color);
+}
+
+.modal__item {
+	position: relative; 
+}
+
+.comment-field::placeholder {
+	color:rgba(107, 116, 120, 0.5);
+	opacity: 0.5 !important;
+}
+
+.modal__icon {
 	position: absolute;
 	display: block;
 	top: 50%;
@@ -30,14 +144,14 @@
 	fill: var(--primary-black-color);
 }
 
-	&-field {
+.modal__field {
 	display: block;
 	margin-bottom: 4px;
 	/* я */
 	transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-	&-info {
+.modal__info {
 	position: relative;
 	display: block;
 	margin-bottom: 4px;
@@ -51,7 +165,7 @@
 	color: var(--primary-icons-color);
 }
 
-	&-area {
+.modal__area {
 	display: block;
 	resize: none; 
 	width: 100%;
@@ -63,32 +177,133 @@
 	transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-	&-input:focus + &-icon {
-	fill: var(--accent-color);
-}
+
+/* =======================CHECKBOX======================= */
+.modal__checkbox {
+	display: flex;
+	justify-content: center;
+	
 }
 
-.modal-form-input:focus-within,
-.comment-field:focus {
-	border-color: var(--accent-color);
-	outline: none;
+.modal-checkbox-user-contract {
+	text-decoration-color: currentcolor;
+	color: rgb(51, 162, 244);
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 1.714;
+	text-decoration-line: underline;
 }
 
-.form-fielde-item {
-	position: relative; 
+.comment-item {
+	margin-bottom: 20px;
 }
 
-.form-title-info {
-	text-align: center;
-	margin: 0;
-	margin-bottom: 12px;
-	font-weight: 700;
-	font-size: 20px;
-	line-height: 1.15;
+.comment-field::placeholder {
+	font-size: 12px;
+	line-height: 1.16;
+	letter-spacing: 0.01em;
+
+	color: rgba(117, 117, 117, 0.5);
+}
+
+.agreement-block {
+	display: flex;
+	justify-content: center;
+}
+
+.modal__agreement {
+	position: relative;
+
+	display: inline-block;
+	margin-bottom: 30px;
+	padding-left: 25px;
+
+	font-size: 14px;
+	line-height: 1.71;
+
 	letter-spacing: 0.03em;
+
+	color: var(--primary-text-color);
 }
 
-.modal-form-btn {
+.modal__agreement--link {
+	display: inline-block;
+	position: relative;
+	color: var(--accent-color);
+}
+
+.modal__agreement--link::after {
+	content: " ";
+	position: absolute;
+	left: 0;
+	bottom: 5px;
+
+	width: 100%;
+	height: 1px;
+	background-color: var(--accent-color);
+}
+
+.checkbox {
+	position: absolute;
+
+	/* -webkit-appearance: none;
+	-moz-appearace: none;
+	appearace: none */
+
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+}
+
+/* Custom checkbox as background image (Makeev's video) */
+
+/* .icon-checkbox {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	transform: translateY(-50%);
+	width: 16px;
+	height: 15px;
+	background-image: url(../images/icons/empty-checkbox.svg);
+	transition: background-image 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.checkbox:checked + .icon-checkbox {
+	background-image: url(../images/icons/checked-checkbox.svg);
+} */
+
+/* Custom checkbox via CSS and svg check icon (Sasha's video and homework description) */
+
+.modal__icon--checkbox {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	transform: translateY(-50%);
+	width: 16px;
+	height: 15px;
+
+	border: 2px solid var(--primary-black-color);
+	border-radius: 2px;
+	background-color: var(--primary-white-color);
+
+	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.checkbox:checked + .modal__icon--checkbox {
+	background-image: url(../img/nav-adress/check_on.svg);
+	background-size: contain;
+	background-color: var(--accent-color);
+	background-origin: border-box;
+	border: transparent;
+}
+
+.checkbox:focus + .modal__icon--checkbox {
+	outline: 1px solid var(--accent-color);
+	outline-offset: 5px;
+}
+
+/* ==============MODAL-BTN============== */
+.modal__form--btn {
 	display: block;
 	margin: 0 auto;
 	padding-top: 10px;
@@ -100,7 +315,9 @@
 	transition: var(--transition-button-color);
 	min-width: 200px;
 	min-height: 50px;
-	& {
+}
+
+.modal__form--btn {
 	font-weight: 700;
 	font-size: 16px;
 	line-height: 1.875;
@@ -111,13 +328,9 @@
 	color: var(--primary-white-color);
 }
 
-	&:hover,
-	&:focus {
+.modal__form--btn:hover,
+.modal__form--btn:focus {
 	background-color: var(--primary-white-color);
 	color: var(--accent-color);
 	
 }
-}
-
-
-

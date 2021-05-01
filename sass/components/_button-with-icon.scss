@@ -1,4 +1,4 @@
-.footer-button {
+.footer__button {
 	@extend %button;
 	display: inline-flex;
 	text-align: center;
@@ -12,7 +12,7 @@
 }
 }
 
-.footer-icon-submit {
+.footer__submit {
 	width: 24px;
 	height: 24px;
 	margin-left: 10px;

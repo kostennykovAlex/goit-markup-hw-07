@@ -1,9 +1,20 @@
-.current {
+.site-nav__link--current {
 	position: relative;
 	color: var(--accent-color);
-}
+	display: block;
+	padding-top: 32px;
+ 	padding-bottom: 32px;
+	margin-bottom: 0;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 1.142;
+	letter-spacing: 0.02em;
 
-.current::after {
+	transition: var(--transorm-color);
+	animation-duration: 1000ms;
+	animation-iteration-count: 1;
+
+	&::after {
 	content: " ";
 	position: absolute;
 	bottom: -1px;
@@ -13,5 +24,5 @@
 	border-radius: 2px;
 
 	background-color: var(--accent-color);
-	
+}
 }

@@ -1,4 +1,4 @@
-.close-button {
+.close__button {
 	position: absolute;
 	top: 8px;
 	right: 8px;
@@ -22,14 +22,14 @@
 	background-color: var(--secondary-bg-color);
 }
 
-    &-icon {
-	width: 27px;
-	height: 26px;
-	margin-left: -4px;
+    &--icon {
+	width: 20px;
+    height: 27px;
+    margin-left: 0px;
 }
 
-    &-icon:hover, 
-    &-icon:focus {
+    &--icon:hover, 
+    &--icon:focus {
 	fill: var(--accent-color);
 }
 }
