@@ -1,6 +1,8 @@
 /* ====================Portfolio-projects==================== */
 
 .portfolio{
+	padding-top: 94px;
+	padding-bottom: 94px;
 	
 	&__list {
 	display: flex;
@@ -36,7 +38,7 @@
 
 	/* identical to box height, or 200% */
 
-	color: var(--primary-title-color);
+	color: $primaryTitleColor;
 }
 
 
@@ -49,7 +51,7 @@
 
 	/* identical to box height, or 187% */
 
-	color: var(--primary-text-color);
+	color: $primaryTextColor;
 
 }
 
@@ -77,7 +79,7 @@
 	display: flex;
 
 	padding: 63px 24px;
-	transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition: transform $primaryTransition;
 	transform: translateY(100%);
 
 	font-weight: 400;

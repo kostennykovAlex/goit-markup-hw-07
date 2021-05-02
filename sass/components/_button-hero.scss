@@ -15,15 +15,15 @@
 	transition: $primaryTransitionColBg;
 	cursor: pointer;
 
-	color: var(--primary-white-color);
+	color: $basicWhiteColor;
 
 	transition-property: background-color, top, box-shadow;
   	transition-duration: 250ms;
     
     &:hover,
     &:focus {
-	background-color: var(--primary-white-color);
-	color: var(--accent-color);
+	background-color: $basicWhiteColor;
+	color: $accentColor;
 	top: 2px;
 	box-shadow: 0px 3px 0px black;
    }

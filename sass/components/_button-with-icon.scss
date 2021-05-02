@@ -7,8 +7,8 @@
 
     &:hover,
     &:focus {
-	background-color: var(--primary-white-color);
-	color: var(--accent-color);
+	background-color: $basicWhiteColor;
+	color: $accentColor;
 }
 }
 
