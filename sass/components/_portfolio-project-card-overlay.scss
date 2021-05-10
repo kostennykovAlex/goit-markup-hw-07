@@ -9,7 +9,7 @@
 	flex-wrap: wrap;
 }
 
-	&__project--information {
+	&__box {
 	padding-left: 24px;
 	padding-bottom: 20px;
 	padding-right: 24px;
@@ -42,7 +42,7 @@
 }
 
 
-	&__paragraf {
+	&__description {
 	margin-bottom: 0;
 	margin-top: 0;
 	font-weight: 400;
@@ -57,18 +57,18 @@
 
 /*======================Portfolio - Overlay======================*/
 
-	&__box {
+	&__tumb {
 	position: relative;
 
 	overflow: hidden;
 	width: 100%;	
 }
 
-	&__block--text {
+	&__text {
 	margin: 0;
 }
 
-	&__block {
+	&__overlay {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -90,8 +90,8 @@
 	background-color: rgba(33, 150, 243, 0.9);
 }
 
-	&__item--card &__card:hover &__block,
-	&__item--card &__card:focus &__block {
+	&__item &__link:hover &__overlay,
+	&__item &__link:focus &__overlay {
 	transform: translateY(0);
 }
 }
