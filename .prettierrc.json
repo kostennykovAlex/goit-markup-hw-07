@@ -1,5 +1,5 @@
 {
-  "arrowParens": "avoid",
+	"arrowParens": "avoid",
 	"bracketSpacing": true,
 	"htmlWhitespaceSensitivity": "ignore",
 	"insertPragma": false,
@@ -16,5 +16,5 @@
 	"useTabs": true,
 	"vueIndentScriptAndStyle": false,
 	"singleAttributePerLine": false
-  }
+}
   
